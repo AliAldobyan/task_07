@@ -11,5 +11,9 @@
             <li>{{restaurant.opening_time}}</li>
             <li>{{restaurant.closing_time}}</li>
         </ul>
+        <hr>
+        <a href="{% url 'restaurant-update' restaurant.id %}"><button>UPDATE</button></a>
+        <a href="{% url 'restaurant-delete' restaurant.id %}"><button>DELETE</button></a>
+
     </body>
 </html>
