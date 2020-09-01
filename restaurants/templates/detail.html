@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Detail</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+
+{% block title %} Detail {% endblock title%}
+
+{% block content %}
         <ul>
             <li>{{restaurant.name}}</li>
             <li>{{restaurant.description}}</li>
@@ -14,6 +12,4 @@
         <hr>
         <a href="{% url 'restaurant-update' restaurant.id %}"><button>UPDATE</button></a>
         <a href="{% url 'restaurant-delete' restaurant.id %}"><button>DELETE</button></a>
-
-    </body>
-</html>
+{% endblock content %}
