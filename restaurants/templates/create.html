@@ -4,10 +4,10 @@
 
 {% block content %}
 
-<form action="{% url 'restaurant-create' %}" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Create">
-</form>
+  <form action="{% url 'restaurant-create' %}" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" name="button">Create</button>
+  </form>
 
 {% endblock content %}
